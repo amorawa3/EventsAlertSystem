@@ -41,6 +41,8 @@ TEAM_IDS = {
     "ATL_HAWKS": "134880",
     "ATL_MLB": "135268",      # Atlanta Braves
     "ATL_UTD": "135851",      # Atlanta United
+    "GATECH_FOOTBALL": "136893", # Georgia Tech Football
+    "GATECH_BASKETBALL": "138614" # Georgia Tech Basketball
 }
 
 TEAM_NAME_MAP = {
@@ -50,6 +52,8 @@ TEAM_NAME_MAP = {
     "ATL_HAWKS": "Atlanta Hawks",
     "ATL_MLB": "Atlanta Braves",
     "ATL_UTD": "Atlanta United",
+    "GATECH_FOOTBALL": "Georgia Tech Football",
+    "GATECH_BASKETBALL": "Georgia Tech Basketball",
     "F1": "Formula 1"
 }
 
@@ -208,10 +212,15 @@ def alert_games_tomorrow():
     logger.info("Sending tomorrow's game alert:\n%s", msg)
     send_alert(msg)
 
-def schedule_one_hour_warnings():
-    logger.info("Scheduling one-hour warnings for today's games...")
+def schedule_one_hour_warnings(for_tomorrow=False):
+    day_label = "tomorrow" if for_tomorrow else "today"
+    logger.info(f"Scheduling one-hour warnings for {day_label}'s games...")
 
-    games = fetch_games_today()
+    # Clear only old reminder jobs
+    schedule.clear("reminders")
+
+    # Pick correct fetcher
+    games = fetch_games_tomorrow() if for_tomorrow else fetch_games_today()
     now = datetime.now(EASTERN)
 
     for g in games:
@@ -228,30 +237,58 @@ def schedule_one_hour_warnings():
             f"(in 1 hour)"
         )
 
-        # Schedule a job at the specific time
-        schedule.every().day.at(reminder_time.strftime("%H:%M")).do(lambda m=msg: send_alert(m))
+        # Tag these jobs as "reminders" so we can clear them later
+        schedule.every().day.at(reminder_time.strftime("%H:%M")).do(
+            lambda m=msg: send_alert(m)
+        ).tag("reminders")
+
         logger.info(f"Scheduled reminder at {reminder_time.strftime('%I:%M %p')} ET: {msg}")
 
+
 def run_scheduler():
+    # Clear reminders at 23:59 and re-add for any games still today
+    schedule.every().day.at("23:59").do(refresh_reminders)
+
+    # Full reset at 00:01 for the new day
+    schedule.every().day.at("00:01").do(lambda: schedule.clear("reminders"))
     schedule.every().day.at("00:01").do(schedule_one_hour_warnings)
+
+    # 10 AM → summary of today
     schedule.every().day.at("10:00").do(alert_games_today)
+
+    # 8 PM → summary of tomorrow
     schedule.every().day.at("20:00").do(alert_games_tomorrow)
+
+    # 8 PM → tomorrow’s reminders
+    schedule.every().day.at("20:01").do(schedule_one_hour_warnings, for_tomorrow=True)
+
     while True:
         schedule.run_pending()
         time.sleep(30)
 
-def main():
-    logger.info("[INFO] Events Alert System is running...")
-
-    updater = Updater(token=TELEGRAM_BOT_TOKEN, use_context=True)
-    dispatcher = updater.dispatcher
-    dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command, handle_message))
-
-    updater.start_polling()
-    threading.Thread(target=run_scheduler, daemon=True).start()
+def refresh_reminders():
+    logger.info("23:59 cleanup: clearing reminders and re-adding for late games")
+    schedule.clear("reminders")
     schedule_one_hour_warnings()
 
-    updater.idle()
+def main():
+    while True:
+        try:
+            logger.info("[INFO] Starting Telegram bot polling...")
+
+            updater = Updater(token=TELEGRAM_BOT_TOKEN, use_context=True)
+            dispatcher = updater.dispatcher
+            dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command, handle_message))
+
+            updater.start_polling(drop_pending_updates=True)
+            threading.Thread(target=run_scheduler, daemon=True).start()
+            schedule_one_hour_warnings()
+
+            updater.idle()
+        except Exception as e:
+            logger.error(f"[ERROR] Bot crashed: {e}. Restarting in 10 seconds...")
+            time.sleep(10)
+
 
 if __name__ == "__main__":
     main()
