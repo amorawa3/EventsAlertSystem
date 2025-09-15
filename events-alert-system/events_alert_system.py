@@ -136,7 +136,10 @@ def fetch_next_games():
         except Exception as e:
             logger.exception(f"Failed to parse date/time for {team_key}: {game_time}, error: {e}")
             continue
-        opponent = event.get("strAwayTeam") if event.get("strHomeTeam") == TEAM_NAME_MAP.get(team_key) else event.get("strHomeTeam")
+        home = event.get("strHomeTeam")
+        away = event.get("strAwayTeam")
+        team_name = event.get("strTeam")
+        opponent = away if home == team_name else home
         games.append({
             "team_key": team_key,
             "opponent": opponent,
