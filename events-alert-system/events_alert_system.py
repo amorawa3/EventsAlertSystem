@@ -120,7 +120,7 @@ def fetch_next_games():
         games.append(f1_event)
 
     for team_key, team_id in TEAM_IDS.items():
-        url = f"https://www.thesportsdb.com/api/v1/json/YOUR_API_KEY/eventsnext.php?id={team_id}"
+        url = f"https://www.thesportsdb.com/api/v1/json/123/eventsnext.php?id={team_id}"
         try:
             resp = requests.get(url)
             resp.raise_for_status()
