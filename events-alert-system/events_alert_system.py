@@ -118,38 +118,78 @@ def fetch_next_games():
     f1_event = fetch_next_f1_event()
     if f1_event:
         games.append(f1_event)
+
     for team_key, team_id in TEAM_IDS.items():
-        url = f"https://www.thesportsdb.com/api/v1/json/123/eventsnext.php?id={team_id}"
-        resp = requests.get(url)
-        if resp.status_code != 200:
-            logger.warning(f"Failed to fetch for {team_key}: HTTP {resp.status_code}")
+        url = f"https://www.thesportsdb.com/api/v1/json/YOUR_API_KEY/eventsnext.php?id={team_id}"
+        try:
+            resp = requests.get(url)
+            resp.raise_for_status()
+            data = resp.json()
+        except Exception as e:
+            logger.warning(f"Failed to fetch for {team_key}: {e}")
             continue
-        data = resp.json()
+
         events = data.get("events")
         if not events:
+            logger.info(f"No events found for {team_key}")
             continue
-        # Get the soonest upcoming event (first in list)
+
         event = events[0]
-        game_time = event.get("dateEvent") + " " + (event.get("strTime") or "00:00:00")
-        try:
-            game_dt = parse_game_time(game_time)
-        except Exception as e:
-            logger.exception(f"Failed to parse date/time for {team_key}: {game_time}, error: {e}")
-            continue
+
+        # Raw fields from API
         home = event.get("strHomeTeam")
         away = event.get("strAwayTeam")
-        team_name = event.get("strTeam")
+        home_id = event.get("idHomeTeam")
+        away_id = event.get("idAwayTeam")
 
-        # 📝 Add detailed logging for debugging
-        logger.info(f"[FETCH] Team: {TEAM_NAME_MAP.get(team_key, team_key)} | "
-            f"Home: {home} | Away: {away} | Reported team_name: {team_name}")
+        # Determine opponent by comparing IDs first (most reliable)
+        opponent = None
+        try:
+            if home_id and str(home_id) == str(team_id):
+                opponent = away
+                our_side = "home"
+            elif away_id and str(away_id) == str(team_id):
+                opponent = home
+                our_side = "away"
+        except Exception:
+            # keep going to fallback logic if something odd happens
+            our_side = "unknown"
 
-        opponent = away if home == team_name else home
+        # Fallback: string match (case-insensitive) against TEAM_NAME_MAP if IDs not present/matching
+        if opponent is None:
+            our_team_name = TEAM_NAME_MAP.get(team_key, "").lower()
+            if our_team_name and our_team_name in (home or "").lower():
+                opponent = away
+                our_side = "home"
+            elif our_team_name and our_team_name in (away or "").lower():
+                opponent = home
+                our_side = "away"
+            else:
+                # Final fallback: pick the other non-empty field
+                opponent = home or away
+                our_side = "unknown"
+
+        # Log details for debugging
+        logger.info(
+            f"[FETCH] TeamKey={team_key} team_id={team_id} | "
+            f"Home='{home}' (id={home_id}) | Away='{away}' (id={away_id}) | "
+            f"OurSide={our_side} | Opponent='{opponent}'"
+        )
+
+        # Parse time
+        game_time_str = event.get("dateEvent") + " " + (event.get("strTime") or "00:00:00")
+        try:
+            game_dt = parse_game_time(game_time_str)
+        except Exception as e:
+            logger.exception(f"Failed to parse date/time for {team_key}: {game_time_str}, error: {e}")
+            continue
+
         games.append({
             "team_key": team_key,
             "opponent": opponent,
             "time": game_dt,
         })
+
     return games
 
 def format_games(games, header):
