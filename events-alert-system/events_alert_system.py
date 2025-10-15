@@ -139,6 +139,11 @@ def fetch_next_games():
         home = event.get("strHomeTeam")
         away = event.get("strAwayTeam")
         team_name = event.get("strTeam")
+
+        # 📝 Add detailed logging for debugging
+        logger.info(f"[FETCH] Team: {TEAM_NAME_MAP.get(team_key, team_key)} | "
+            f"Home: {home} | Away: {away} | Reported team_name: {team_name}")
+
         opponent = away if home == team_name else home
         games.append({
             "team_key": team_key,
@@ -217,7 +222,7 @@ def alert_games_tomorrow():
 
 def schedule_one_hour_warnings(for_tomorrow=False):
     day_label = "tomorrow" if for_tomorrow else "today"
-    logger.info(f"Scheduling one-hour warnings for {day_label}'s games...")
+    logger.info(f"Scheduling one-hour warnings and game start alerts for {day_label}'s games...")
 
     # Clear only old reminder jobs
     schedule.clear("reminders")
@@ -230,23 +235,36 @@ def schedule_one_hour_warnings(for_tomorrow=False):
         reminder_time = g["time"] - timedelta(hours=1)
 
         # Skip games that start in less than 1 hour or already passed
-        if reminder_time <= now:
-            continue
+        if reminder_time > now:
+            reminder_msg = (
+                f"⏰ *Reminder:*\n"
+                f"*{TEAM_NAME_MAP.get(g['team_key'], g['team_key'])}* "
+                f"play vs *{g['opponent']}* at {g['time'].strftime('%I:%M %p ET')} "
+                f"(in 1 hour)"
+            )
 
-        msg = (
-            f"⏰ *Reminder:*\n"
-            f"*{TEAM_NAME_MAP.get(g['team_key'], g['team_key'])}* "
-            f"play vs *{g['opponent']}* at {g['time'].strftime('%I:%M %p ET')} "
-            f"(in 1 hour)"
-        )
+            schedule.every().day.at(reminder_time.strftime("%H:%M")).do(
+                lambda m=reminder_msg: send_alert(m)
+            ).tag("reminders")
 
-        # Tag these jobs as "reminders" so we can clear them later
-        schedule.every().day.at(reminder_time.strftime("%H:%M")).do(
-            lambda m=msg: send_alert(m)
-        ).tag("reminders")
+            logger.info(f"Scheduled reminder at {reminder_time.strftime('%I:%M %p')} ET: {reminder_msg}")
 
-        logger.info(f"Scheduled reminder at {reminder_time.strftime('%I:%M %p')} ET: {msg}")
+        ### 🆕 NEW: Schedule game start alert
+        game_start_time = g["time"]
 
+        if game_start_time > now:
+            start_msg = (
+                f"🏈 *Game Starting Now!*\n"
+                f"*{TEAM_NAME_MAP.get(g['team_key'], g['team_key'])}* "
+                f"vs *{g['opponent']}* is starting right now "
+                f"({g['time'].strftime('%I:%M %p ET')})!"
+            )
+
+            schedule.every().day.at(game_start_time.strftime("%H:%M")).do(
+                lambda m=start_msg: send_alert(m)
+            ).tag("reminders")
+
+            logger.info(f"Scheduled game start alert at {game_start_time.strftime('%I:%M %p')} ET: {start_msg}")
 
 def run_scheduler():
     # Clear reminders at 23:59 and re-add for any games still today
