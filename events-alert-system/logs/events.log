@@ -1,5 +1,2143 @@
-[2025-07-29 12:15:50,742] INFO - [INFO] Events Alert System is running...
-[2025-07-29 12:15:50,742] INFO - Scheduler started
-[2025-07-29 12:15:51,477] INFO - Scheduling one-hour warnings for today's games...
-[2025-07-29 12:15:54,026] INFO - Scheduled reminder at 06:40 PM ET: ⏰ *Reminder:*
-*Atlanta Braves* play vs *Kansas City Royals* at 07:40 PM ET (in 1 hour)
+[2025-12-28 00:02:24,591] INFO - Scheduling one-hour warnings and game start alerts for today
+[2025-12-28 00:02:24,864] INFO - [F1] No events found
+[2025-12-28 00:02:25,109] INFO - [FUTURE-CHECK] Candidate event dt=2026-06-12T21:00:00-04:00 now=2025-12-28T00:02:25.109300-05:00
+[2025-12-28 00:02:25,110] INFO - [FUTURE-CHECK] --> SELECTED this as next event
+[2025-12-28 00:02:25,110] INFO - [FETCH] TeamKey=USA team_id=134514 | Home='USA' (id=134514) | Away='Paraguay' (id=136471) | OurSide=home | Opponent='Paraguay' | event_date=2026-06-13 strTime=01:00:00 => parsed=2026-06-12T21:00:00-04:00
+[2025-12-28 00:02:25,458] INFO - No events found for CRC
+[2025-12-28 00:02:26,060] INFO - [FUTURE-CHECK] Candidate event dt=2025-12-29T20:15:00-05:00 now=2025-12-28T00:02:26.059632-05:00
+[2025-12-28 00:02:26,060] INFO - [FUTURE-CHECK] --> SELECTED this as next event
+[2025-12-28 00:02:26,060] INFO - [FETCH] TeamKey=ATL_FALCONS team_id=134942 | Home='Atlanta Falcons' (id=134942) | Away='Los Angeles Rams' (id=135907) | OurSide=home | Opponent='Los Angeles Rams' | event_date=2025-12-30 strTime=01:15:00 => parsed=2025-12-29T20:15:00-05:00
+[2025-12-28 00:02:26,464] INFO - [FUTURE-CHECK] Candidate event dt=2025-12-27T20:00:00-05:00 now=2025-12-28T00:02:26.462965-05:00
+[2025-12-28 00:02:26,464] INFO - [FUTURE-CHECK] All events were in the past, falling back to events[0]
+[2025-12-28 00:02:26,465] INFO - [FETCH] TeamKey=ATL_HAWKS team_id=134880 | Home='Atlanta Hawks' (id=134880) | Away='New York Knicks' (id=134862) | OurSide=home | Opponent='New York Knicks' | event_date=2025-12-28 strTime=01:00:00 => parsed=2025-12-27T20:00:00-05:00
+[2025-12-28 00:02:26,881] INFO - [FUTURE-CHECK] Candidate event dt=2026-02-21T16:00:00-05:00 now=2025-12-28T00:02:26.881157-05:00
+[2025-12-28 00:02:26,882] INFO - [FUTURE-CHECK] --> SELECTED this as next event
+[2025-12-28 00:02:26,883] INFO - [FETCH] TeamKey=ATL_MLB team_id=135268 | Home='Tampa Bay Rays' (id=135263) | Away='Atlanta Braves' (id=135268) | OurSide=away | Opponent='Tampa Bay Rays' | event_date=2026-02-21 strTime=21:00:00 => parsed=2026-02-21T16:00:00-05:00
+[2025-12-28 00:02:27,193] INFO - No events found for ATL_UTD
+[2025-12-28 00:02:27,525] INFO - No events found for GATECH_FOOTBALL
+[2025-12-28 00:02:27,764] INFO - [FUTURE-CHECK] Candidate event dt=2025-12-28T14:30:00-05:00 now=2025-12-28T00:02:27.763832-05:00
+[2025-12-28 00:02:27,764] INFO - [FUTURE-CHECK] --> SELECTED this as next event
+[2025-12-28 00:02:27,765] INFO - [FETCH] TeamKey=GATECH_BASKETBALL team_id=138614 | Home='Georgia Tech' (id=138614) | Away='Florida A and M' (id=138600) | OurSide=home | Opponent='Florida A and M' | event_date=2025-12-28 strTime=19:30:00 => parsed=2025-12-28T14:30:00-05:00
+[2025-12-28 00:02:27,772] INFO - [FETCH-TODAY] Found 1 games for 2025-12-28
+[2025-12-28 00:02:27,772] INFO - [SCHED-PLAN] Team=GATECH_BASKETBALL Opp=Florida A and M game_time=2025-12-28T14:30:00-05:00 now=2025-12-28T00:02:27.772435-05:00
+[2025-12-28 00:02:27,773] INFO - [SCHED] Registered daily job at 13:30 for date 2025-12-28 (tag=reminders)
+[2025-12-28 00:02:27,774] INFO - [SCHED] Planned 1-hour reminder for GATECH_BASKETBALL at 2025-12-28 13:30 (ET)
+[2025-12-28 00:02:27,774] INFO - [SCHED] Registered daily job at 14:30 for date 2025-12-28 (tag=reminders)
+[2025-12-28 00:02:27,774] INFO - [SCHED] Planned start alert for GATECH_BASKETBALL at 2025-12-28 14:30 (ET)
+[2025-12-28 01:03:19,596] ERROR - Error while getting Updates: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-12-28 01:03:19,629] ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 81, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/retry.py", line 552, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 651, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 602, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/extbot.py", line 228, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 3140, in get_updates
+    self._post(
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-12-28 06:09:11,668] WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe5038f0>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:09:40,487] WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe500830>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:09:45,548] WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46a750>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:09:50,562] ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46a2d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-12-28 06:09:50,565] ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1061, in _validate_conn
+    conn.connect()
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x72fe46a2d0>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 81, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46a2d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 651, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 602, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/extbot.py", line 228, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 3140, in get_updates
+    self._post(
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46a2d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-12-28 06:09:56,584] WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46af90>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:10:01,605] WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46a930>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:10:06,622] WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46a3c0>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:10:11,636] ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46b3b0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-12-28 06:10:11,637] ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1061, in _validate_conn
+    conn.connect()
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x72fe46b3b0>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 81, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46b3b0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 651, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 602, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/extbot.py", line 228, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 3140, in get_updates
+    self._post(
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46b3b0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-12-28 06:10:18,152] WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe4688c0>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:10:23,173] WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46b590>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:10:28,376] WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46a030>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:10:33,397] ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46ab40>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-12-28 06:10:33,399] ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1061, in _validate_conn
+    conn.connect()
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x72fe46ab40>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 81, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46ab40>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 651, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 602, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/extbot.py", line 228, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 3140, in get_updates
+    self._post(
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46ab40>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-12-28 06:10:40,673] WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46ac00>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:10:45,693] WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe4697c0>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:10:50,769] WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe469100>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:10:55,787] ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe503a70>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-12-28 06:10:55,789] ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1061, in _validate_conn
+    conn.connect()
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x72fe503a70>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 81, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe503a70>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 651, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 602, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/extbot.py", line 228, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 3140, in get_updates
+    self._post(
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe503a70>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-12-28 06:11:37,066] WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe500830>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:11:42,083] WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe503cb0>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:11:47,103] WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7306ec13d0>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:11:52,125] ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x730bfba0f0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-12-28 06:11:52,126] ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1061, in _validate_conn
+    conn.connect()
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x730bfba0f0>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 81, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x730bfba0f0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 651, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 602, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/extbot.py", line 228, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 3140, in get_updates
+    self._post(
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x730bfba0f0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-12-28 06:12:04,635] WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46ac90>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:12:09,658] WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46a3c0>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:12:14,685] WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46af30>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:12:19,702] ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46a570>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-12-28 06:12:19,704] ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1061, in _validate_conn
+    conn.connect()
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x72fe46a570>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 81, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46a570>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 651, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 602, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/extbot.py", line 228, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 3140, in get_updates
+    self._post(
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46a570>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-12-28 06:12:25,724] WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46b0e0>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:12:30,748] WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe468f50>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:12:35,769] WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46b380>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:12:40,853] ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46b7a0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-12-28 06:12:40,854] ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1061, in _validate_conn
+    conn.connect()
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x72fe46b7a0>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 81, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46b7a0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 651, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 602, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/extbot.py", line 228, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 3140, in get_updates
+    self._post(
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46b7a0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-12-28 06:12:47,375] WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46ba70>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:12:52,397] WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46bbc0>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:13:02,881] WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7306ec1e80>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:13:07,896] WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7308fa2c60>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:13:12,921] WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe5038f0>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:13:17,941] ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe503350>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-12-28 06:13:17,942] ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1061, in _validate_conn
+    conn.connect()
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x72fe503350>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 81, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe503350>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 651, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 602, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/extbot.py", line 228, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 3140, in get_updates
+    self._post(
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe503350>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-12-28 06:13:23,956] WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe5026c0>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:13:28,973] WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe503770>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:13:33,992] WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46a2d0>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:13:39,093] ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe469c10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-12-28 06:13:39,094] ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1061, in _validate_conn
+    conn.connect()
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x72fe469c10>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 81, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe469c10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 651, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 602, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/extbot.py", line 228, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 3140, in get_updates
+    self._post(
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe469c10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-12-28 06:13:45,618] WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46a3c0>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:13:50,639] WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46ad80>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:13:55,661] WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46b410>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:14:06,016] WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe4a00e0>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:14:11,040] WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe4a01d0>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:14:16,060] WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe4a0410>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 06:14:21,080] ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe4a0620>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-12-28 06:14:21,081] ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1061, in _validate_conn
+    conn.connect()
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x72fe4a0620>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 81, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe4a0620>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 651, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 602, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/extbot.py", line 228, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 3140, in get_updates
+    self._post(
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe4a0620>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-12-28 10:01:22,856] INFO - [F1] No events found
+[2025-12-28 10:01:23,108] INFO - [FUTURE-CHECK] Candidate event dt=2026-06-12T21:00:00-04:00 now=2025-12-28T10:01:23.106576-05:00
+[2025-12-28 10:01:23,108] INFO - [FUTURE-CHECK] --> SELECTED this as next event
+[2025-12-28 10:01:23,108] INFO - [FETCH] TeamKey=USA team_id=134514 | Home='USA' (id=134514) | Away='Paraguay' (id=136471) | OurSide=home | Opponent='Paraguay' | event_date=2026-06-13 strTime=01:00:00 => parsed=2026-06-12T21:00:00-04:00
+[2025-12-28 10:01:23,347] INFO - No events found for CRC
+[2025-12-28 10:01:23,584] INFO - [FUTURE-CHECK] Candidate event dt=2025-12-29T20:15:00-05:00 now=2025-12-28T10:01:23.584042-05:00
+[2025-12-28 10:01:23,584] INFO - [FUTURE-CHECK] --> SELECTED this as next event
+[2025-12-28 10:01:23,585] INFO - [FETCH] TeamKey=ATL_FALCONS team_id=134942 | Home='Atlanta Falcons' (id=134942) | Away='Los Angeles Rams' (id=135907) | OurSide=home | Opponent='Los Angeles Rams' | event_date=2025-12-30 strTime=01:15:00 => parsed=2025-12-29T20:15:00-05:00
+[2025-12-28 10:01:23,839] INFO - [FUTURE-CHECK] Candidate event dt=2025-12-27T20:00:00-05:00 now=2025-12-28T10:01:23.839412-05:00
+[2025-12-28 10:01:23,840] INFO - [FUTURE-CHECK] All events were in the past, falling back to events[0]
+[2025-12-28 10:01:23,840] INFO - [FETCH] TeamKey=ATL_HAWKS team_id=134880 | Home='Atlanta Hawks' (id=134880) | Away='New York Knicks' (id=134862) | OurSide=home | Opponent='New York Knicks' | event_date=2025-12-28 strTime=01:00:00 => parsed=2025-12-27T20:00:00-05:00
+[2025-12-28 10:01:24,095] INFO - [FUTURE-CHECK] Candidate event dt=2026-02-21T16:00:00-05:00 now=2025-12-28T10:01:24.094920-05:00
+[2025-12-28 10:01:24,096] INFO - [FUTURE-CHECK] --> SELECTED this as next event
+[2025-12-28 10:01:24,096] INFO - [FETCH] TeamKey=ATL_MLB team_id=135268 | Home='Tampa Bay Rays' (id=135263) | Away='Atlanta Braves' (id=135268) | OurSide=away | Opponent='Tampa Bay Rays' | event_date=2026-02-21 strTime=21:00:00 => parsed=2026-02-21T16:00:00-05:00
+[2025-12-28 10:01:24,516] INFO - No events found for ATL_UTD
+[2025-12-28 10:01:24,785] INFO - No events found for GATECH_FOOTBALL
+[2025-12-28 10:01:25,054] INFO - [FUTURE-CHECK] Candidate event dt=2025-12-28T14:30:00-05:00 now=2025-12-28T10:01:25.053686-05:00
+[2025-12-28 10:01:25,054] INFO - [FUTURE-CHECK] --> SELECTED this as next event
+[2025-12-28 10:01:25,055] INFO - [FETCH] TeamKey=GATECH_BASKETBALL team_id=138614 | Home='Georgia Tech' (id=138614) | Away='Florida A and M' (id=138600) | OurSide=home | Opponent='Florida A and M' | event_date=2025-12-28 strTime=19:30:00 => parsed=2025-12-28T14:30:00-05:00
+[2025-12-28 10:01:25,062] INFO - [FETCH-TODAY] Found 1 games for 2025-12-28
+[2025-12-28 10:01:25,063] INFO - Sending today's game alert
+[2025-12-28 10:01:25,066] INFO - [TELEGRAM] 📅 *Today's Games:* |  | *Georgia Tech Basketball* vs *Florida A and M* on Dec 28, 02:30 PM ET |  | No games currently scheduled for *USA* on TheSportsDB. |  | No games currently scheduled for *Costa Rica* on TheSportsDB. |  | No games currently scheduled for *Atlanta Falcons* on TheSportsDB. |  | No games currently scheduled for *Atlanta Hawks* on TheSportsDB. |  | No games currently scheduled for *Atlanta Braves* on TheSportsDB. |  | No games currently scheduled for *Atlanta United* on TheSportsDB. |  | No games currently scheduled for *Georgia Tech Football* on TheSportsDB. |  | No games currently scheduled for *Formula 1* on TheSportsDB.
+[2025-12-28 10:19:55,996] WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe468830>: Failed to establish a new connection: [Errno 7] No address associated with hostname')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/getUpdates
+[2025-12-28 13:31:06,597] INFO - [TELEGRAM] ⏰ *Reminder:* | *Georgia Tech Basketball* play vs *Florida A and M* at 02:30 PM ET (in 1 hour)
+[2025-12-28 13:51:12,011] ERROR - Error while getting Updates: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-12-28 13:51:12,023] ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 81, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/retry.py", line 552, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 651, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 602, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/extbot.py", line 228, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 3140, in get_updates
+    self._post(
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-12-28 14:30:55,287] INFO - [TELEGRAM] 🏁 *Game Starting Now!* | *Georgia Tech Basketball* vs *Florida A and M* is starting now at 02:30 PM ET!
+[2025-12-28 14:31:15,924] ERROR - Error while getting Updates: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-12-28 14:31:15,927] ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 81, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/retry.py", line 552, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 651, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 602, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/extbot.py", line 228, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 3140, in get_updates
+    self._post(
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-12-28 14:31:15,945] WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe503950>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/sendMessage
+[2025-12-28 14:31:16,010] WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe46b0b0>: Failed to establish a new connection: [Errno 7] No address associated with hostname')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/sendMessage
+[2025-12-28 14:31:16,023] WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe4689e0>: Failed to establish a new connection: [Errno 7] No address associated with hostname')': /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/sendMessage
+[2025-12-28 14:31:16,030] ERROR - [ERROR] Failed to send Telegram message: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/sendMessage (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe4692b0>: Failed to establish a new connection: [Errno 7] No address associated with hostname'))
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/socket.py", line 978, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 7] No address associated with hostname
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1061, in _validate_conn
+    conn.connect()
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x72fe4692b0>: Failed to establish a new connection: [Errno 7] No address associated with hostname
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 81, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/sendMessage (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe4692b0>: Failed to establish a new connection: [Errno 7] No address associated with hostname'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/EventsAlertSystem/events-alert-system/events_alert_system.py", line 70, in send_alert
+    bot.send_message(chat_id=TELEGRAM_CHAT_ID, text=msg, parse_mode="Markdown")
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 534, in send_message
+    return self._message(  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 344, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk/sendMessage (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x72fe4692b0>: Failed to establish a new connection: [Errno 7] No address associated with hostname'))
+[2025-12-28 15:15:09,362] ERROR - Error while getting Updates: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-12-28 15:15:09,372] ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 81, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/retry.py", line 552, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 651, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 602, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/extbot.py", line 228, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 3140, in get_updates
+    self._post(
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-12-28 15:28:11,138] ERROR - Error while getting Updates: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-12-28 15:28:11,162] ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 81, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/retry.py", line 552, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 651, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 602, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/extbot.py", line 228, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 3140, in get_updates
+    self._post(
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-12-28 15:53:35,364] ERROR - Error while getting Updates: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-12-28 15:53:35,374] ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 81, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/retry.py", line 552, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 651, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 602, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/extbot.py", line 228, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 3140, in get_updates
+    self._post(
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-12-28 16:19:33,358] ERROR - Error while getting Updates: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-12-28 16:19:33,374] ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 81, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/retry.py", line 552, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 651, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 602, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/extbot.py", line 228, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 3140, in get_updates
+    self._post(
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-12-28 16:59:51,104] ERROR - Error while getting Updates: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-12-28 16:59:51,134] ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 81, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/retry.py", line 552, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 651, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 602, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/extbot.py", line 228, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 3140, in get_updates
+    self._post(
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-12-28 17:17:55,440] ERROR - Error while getting Updates: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-12-28 17:17:55,448] ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 81, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/retry.py", line 552, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 651, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 602, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/extbot.py", line 228, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 3140, in get_updates
+    self._post(
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-12-28 18:56:04,829] ERROR - Error while getting Updates: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-12-28 18:56:04,851] ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 81, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/retry.py", line 552, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 651, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 602, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/extbot.py", line 228, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 3140, in get_updates
+    self._post(
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-12-28 18:56:16,776] ERROR - Error while getting Updates: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-12-28 18:56:16,778] ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 81, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/retry.py", line 552, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 651, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 602, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/extbot.py", line 228, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 3140, in get_updates
+    self._post(
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-12-28 20:02:51,500] INFO - [F1] No events found
+[2025-12-28 20:02:51,836] INFO - [FUTURE-CHECK] Candidate event dt=2026-06-12T21:00:00-04:00 now=2025-12-28T20:02:51.834755-05:00
+[2025-12-28 20:02:51,836] INFO - [FUTURE-CHECK] --> SELECTED this as next event
+[2025-12-28 20:02:51,837] INFO - [FETCH] TeamKey=USA team_id=134514 | Home='USA' (id=134514) | Away='Paraguay' (id=136471) | OurSide=home | Opponent='Paraguay' | event_date=2026-06-13 strTime=01:00:00 => parsed=2026-06-12T21:00:00-04:00
+[2025-12-28 20:02:52,262] INFO - No events found for CRC
+[2025-12-28 20:02:53,088] INFO - [FUTURE-CHECK] Candidate event dt=2025-12-29T20:15:00-05:00 now=2025-12-28T20:02:53.088016-05:00
+[2025-12-28 20:02:53,088] INFO - [FUTURE-CHECK] --> SELECTED this as next event
+[2025-12-28 20:02:53,089] INFO - [FETCH] TeamKey=ATL_FALCONS team_id=134942 | Home='Atlanta Falcons' (id=134942) | Away='Los Angeles Rams' (id=135907) | OurSide=home | Opponent='Los Angeles Rams' | event_date=2025-12-30 strTime=01:15:00 => parsed=2025-12-29T20:15:00-05:00
+[2025-12-28 20:02:53,526] INFO - [FUTURE-CHECK] Candidate event dt=2025-12-29T20:00:00-05:00 now=2025-12-28T20:02:53.525670-05:00
+[2025-12-28 20:02:53,527] INFO - [FUTURE-CHECK] --> SELECTED this as next event
+[2025-12-28 20:02:53,528] INFO - [FETCH] TeamKey=ATL_HAWKS team_id=134880 | Home='Oklahoma City Thunder' (id=134887) | Away='Atlanta Hawks' (id=134880) | OurSide=away | Opponent='Oklahoma City Thunder' | event_date=2025-12-30 strTime=01:00:00 => parsed=2025-12-29T20:00:00-05:00
+[2025-12-28 20:02:54,225] INFO - [FUTURE-CHECK] Candidate event dt=2026-02-21T16:00:00-05:00 now=2025-12-28T20:02:54.224852-05:00
+[2025-12-28 20:02:54,225] INFO - [FUTURE-CHECK] --> SELECTED this as next event
+[2025-12-28 20:02:54,226] INFO - [FETCH] TeamKey=ATL_MLB team_id=135268 | Home='Tampa Bay Rays' (id=135263) | Away='Atlanta Braves' (id=135268) | OurSide=away | Opponent='Tampa Bay Rays' | event_date=2026-02-21 strTime=21:00:00 => parsed=2026-02-21T16:00:00-05:00
+[2025-12-28 20:02:56,389] INFO - No events found for ATL_UTD
+[2025-12-28 20:02:57,058] INFO - No events found for GATECH_FOOTBALL
+[2025-12-28 20:02:57,619] INFO - [FUTURE-CHECK] Candidate event dt=2025-12-31T16:00:00-05:00 now=2025-12-28T20:02:57.618153-05:00
+[2025-12-28 20:02:57,619] INFO - [FUTURE-CHECK] --> SELECTED this as next event
+[2025-12-28 20:02:57,620] INFO - [FETCH] TeamKey=GATECH_BASKETBALL team_id=138614 | Home='Duke' (id=138612) | Away='Georgia Tech' (id=138614) | OurSide=away | Opponent='Duke' | event_date=2025-12-31 strTime=21:00:00 => parsed=2025-12-31T16:00:00-05:00
+[2025-12-28 20:02:57,632] INFO - [FETCH-TOMORROW] Found 2 games for 2025-12-29
+[2025-12-28 20:02:57,633] INFO - Sending tomorrow's game alert
+[2025-12-28 20:02:57,633] INFO - [TELEGRAM] ⏭ *Tomorrow's Games:* |  | *Atlanta Hawks* vs *Oklahoma City Thunder* on Dec 29, 08:00 PM ET |  | *Atlanta Falcons* vs *Los Angeles Rams* on Dec 29, 08:15 PM ET |  | No games currently scheduled for *USA* on TheSportsDB. |  | No games currently scheduled for *Costa Rica* on TheSportsDB. |  | No games currently scheduled for *Atlanta Braves* on TheSportsDB. |  | No games currently scheduled for *Atlanta United* on TheSportsDB. |  | No games currently scheduled for *Georgia Tech Football* on TheSportsDB. |  | No games currently scheduled for *Georgia Tech Basketball* on TheSportsDB. |  | No games currently scheduled for *Formula 1* on TheSportsDB.
+[2025-12-28 20:03:02,669] INFO - Scheduling one-hour warnings and game start alerts for tomorrow
+[2025-12-28 20:03:03,241] INFO - [F1] No events found
+[2025-12-28 20:03:03,964] INFO - [FUTURE-CHECK] Candidate event dt=2026-06-12T21:00:00-04:00 now=2025-12-28T20:03:03.963621-05:00
+[2025-12-28 20:03:03,964] INFO - [FUTURE-CHECK] --> SELECTED this as next event
+[2025-12-28 20:03:03,964] INFO - [FETCH] TeamKey=USA team_id=134514 | Home='USA' (id=134514) | Away='Paraguay' (id=136471) | OurSide=home | Opponent='Paraguay' | event_date=2026-06-13 strTime=01:00:00 => parsed=2026-06-12T21:00:00-04:00
+[2025-12-28 20:03:04,367] INFO - No events found for CRC
+[2025-12-28 20:03:04,754] INFO - [FUTURE-CHECK] Candidate event dt=2025-12-29T20:15:00-05:00 now=2025-12-28T20:03:04.753860-05:00
+[2025-12-28 20:03:04,754] INFO - [FUTURE-CHECK] --> SELECTED this as next event
+[2025-12-28 20:03:04,755] INFO - [FETCH] TeamKey=ATL_FALCONS team_id=134942 | Home='Atlanta Falcons' (id=134942) | Away='Los Angeles Rams' (id=135907) | OurSide=home | Opponent='Los Angeles Rams' | event_date=2025-12-30 strTime=01:15:00 => parsed=2025-12-29T20:15:00-05:00
+[2025-12-28 20:03:05,236] INFO - [FUTURE-CHECK] Candidate event dt=2025-12-29T20:00:00-05:00 now=2025-12-28T20:03:05.235512-05:00
+[2025-12-28 20:03:05,236] INFO - [FUTURE-CHECK] --> SELECTED this as next event
+[2025-12-28 20:03:05,236] INFO - [FETCH] TeamKey=ATL_HAWKS team_id=134880 | Home='Oklahoma City Thunder' (id=134887) | Away='Atlanta Hawks' (id=134880) | OurSide=away | Opponent='Oklahoma City Thunder' | event_date=2025-12-30 strTime=01:00:00 => parsed=2025-12-29T20:00:00-05:00
+[2025-12-28 20:03:06,110] INFO - [FUTURE-CHECK] Candidate event dt=2026-02-21T16:00:00-05:00 now=2025-12-28T20:03:06.110084-05:00
+[2025-12-28 20:03:06,111] INFO - [FUTURE-CHECK] --> SELECTED this as next event
+[2025-12-28 20:03:06,111] INFO - [FETCH] TeamKey=ATL_MLB team_id=135268 | Home='Tampa Bay Rays' (id=135263) | Away='Atlanta Braves' (id=135268) | OurSide=away | Opponent='Tampa Bay Rays' | event_date=2026-02-21 strTime=21:00:00 => parsed=2026-02-21T16:00:00-05:00
+[2025-12-28 20:03:06,788] INFO - No events found for ATL_UTD
+[2025-12-28 20:03:07,184] INFO - No events found for GATECH_FOOTBALL
+[2025-12-28 20:03:07,831] INFO - [FUTURE-CHECK] Candidate event dt=2025-12-31T16:00:00-05:00 now=2025-12-28T20:03:07.830894-05:00
+[2025-12-28 20:03:07,831] INFO - [FUTURE-CHECK] --> SELECTED this as next event
+[2025-12-28 20:03:07,832] INFO - [FETCH] TeamKey=GATECH_BASKETBALL team_id=138614 | Home='Duke' (id=138612) | Away='Georgia Tech' (id=138614) | OurSide=away | Opponent='Duke' | event_date=2025-12-31 strTime=21:00:00 => parsed=2025-12-31T16:00:00-05:00
+[2025-12-28 20:03:07,840] INFO - [FETCH-TOMORROW] Found 2 games for 2025-12-29
+[2025-12-28 20:03:07,841] INFO - [SCHED-PLAN] Team=ATL_FALCONS Opp=Los Angeles Rams game_time=2025-12-29T20:15:00-05:00 now=2025-12-28T20:03:07.841397-05:00
+[2025-12-28 20:03:07,842] INFO - [SCHED] Registered daily job at 19:15 for date 2025-12-29 (tag=reminders)
+[2025-12-28 20:03:07,843] INFO - [SCHED] Planned 1-hour reminder for ATL_FALCONS at 2025-12-29 19:15 (ET)
+[2025-12-28 20:03:07,843] INFO - [SCHED] Registered daily job at 20:15 for date 2025-12-29 (tag=reminders)
+[2025-12-28 20:03:07,844] INFO - [SCHED] Planned start alert for ATL_FALCONS at 2025-12-29 20:15 (ET)
+[2025-12-28 20:03:07,844] INFO - [SCHED-PLAN] Team=ATL_HAWKS Opp=Oklahoma City Thunder game_time=2025-12-29T20:00:00-05:00 now=2025-12-28T20:03:07.841397-05:00
+[2025-12-28 20:03:07,845] INFO - [SCHED] Registered daily job at 19:00 for date 2025-12-29 (tag=reminders)
+[2025-12-28 20:03:07,845] INFO - [SCHED] Planned 1-hour reminder for ATL_HAWKS at 2025-12-29 19:00 (ET)
+[2025-12-28 20:03:07,846] INFO - [SCHED] Registered daily job at 20:00 for date 2025-12-29 (tag=reminders)
+[2025-12-28 20:03:07,846] INFO - [SCHED] Planned start alert for ATL_HAWKS at 2025-12-29 20:00 (ET)
+[2025-12-28 20:18:42,946] INFO - [SCHED-SKIP] Scheduled job at 20:15 skipped because target_date=2025-12-29 != now=2025-12-28
+[2025-12-28 20:29:17,446] ERROR - Error while getting Updates: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-12-28 20:29:17,453] ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 81, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/util/retry.py", line 552, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/urllib3/connectionpool.py", line 463, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 651, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/updater.py", line 602, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/ext/extbot.py", line 228, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 3140, in get_updates
+    self._post(
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/telegram/utils/request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
