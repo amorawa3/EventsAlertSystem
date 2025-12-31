@@ -21,7 +21,6 @@ os.makedirs(LOG_DIR, exist_ok=True)
 handler = TimedRotatingFileHandler(LOG_FILE, when="midnight", backupCount=7, encoding="utf-8")
 handler.setLevel(logging.INFO)
 
-# Log format
 formatter = logging.Formatter("[%(asctime)s] %(levelname)s - %(message)s")
 handler.setFormatter(formatter)
 
@@ -32,14 +31,14 @@ logger.addHandler(handler)
 
 # === CONFIG ===
 TEAM_IDS = {
-    "USA": "134514",          # US Men's National Team
-    "CRC": "134505",          # Costa Rica National Team
+    "USA": "134514",
+    "CRC": "134505",
     "ATL_FALCONS": "134942",
     "ATL_HAWKS": "134880",
-    "ATL_MLB": "135268",      # Atlanta Braves
-    "ATL_UTD": "135851",      # Atlanta United
-    "GATECH_FOOTBALL": "136893", # Georgia Tech Football
-    "GATECH_BASKETBALL": "138614" # Georgia Tech Basketball
+    "ATL_MLB": "135268",
+    "ATL_UTD": "135851",
+    "GATECH_FOOTBALL": "136893",
+    "GATECH_BASKETBALL": "138614"
 }
 
 TEAM_NAME_MAP = {
@@ -250,7 +249,6 @@ def fetch_next_games():
         home_id = event.get("idHomeTeam")
         away_id = event.get("idAwayTeam")
 
-        # Determine opponent by comparing IDs first (most reliable)
         opponent = None
         our_side = "unknown"
         try:
@@ -263,7 +261,6 @@ def fetch_next_games():
         except Exception:
             our_side = "unknown"
 
-        # Fallback: string match (case-insensitive) against TEAM_NAME_MAP if IDs not present/matching
         if opponent is None:
             our_team_name = TEAM_NAME_MAP.get(team_key, "").lower()
             if our_team_name and our_team_name in (home or "").lower():
@@ -273,9 +270,7 @@ def fetch_next_games():
                 opponent = home
                 our_side = "away"
             else:
-                # Final fallback: pick the other non-empty field
                 opponent = home or away
-                our_side = "unknown"
 
         # Parse time robustly
         date_field = event.get("dateEvent")
@@ -318,59 +313,46 @@ def fetch_games_tomorrow():
 def format_games(games, header):
     if not games:
         return header + "\nNo upcoming games found."
-
     lines = []
     included_keys = set()
-
     for g in sorted(games, key=lambda x: x["time"]):
         dt = g["time"]
-        date_str = dt.strftime("%b %d")         # e.g., "Jul 27"
-        time_str = dt.strftime("%I:%M %p ET")   # e.g., "09:00 AM ET"
+        date_str = dt.strftime("%b %d")
+        time_str = dt.strftime("%I:%M %p ET")
         team_key = g["team_key"]
         opponent = g["opponent"]
         included_keys.add(team_key)
-
         if team_key == "F1":
             lines.append(f"*Formula 1* races in the *{opponent}* on {date_str}, {time_str}")
         else:
             team_full = TEAM_NAME_MAP.get(team_key, team_key)
             lines.append(f"*{team_full}* vs *{opponent}* on {date_str}, {time_str}")
-
-    # Add "no games scheduled" message for teams not included
     for key, name in TEAM_NAME_MAP.items():
         if key not in included_keys:
             lines.append(f"No games currently scheduled for *{name}* on TheSportsDB.")
-
     return header + "\n\n" + "\n\n".join(lines)
 
 
 def handle_message(update, context):
     text = update.message.text.lower().strip()
-
     if text == "upcoming games":
         games = fetch_next_games()
         msg = format_games(games, "🔜 *Upcoming Games:*")
         update.message.reply_text(msg, parse_mode="Markdown")
-
     elif text == "games today":
         games = fetch_games_today()
         msg = format_games(games, "📅 *Games Today:*")
         update.message.reply_text(msg, parse_mode="Markdown")
-
     elif text == "help":
         msg = (
             "🤖 *Available Commands:*\n"
-            "- `upcoming games`: Show the next scheduled game for each team\n"
-            "- `games today`: Show all games scheduled for today\n"
+            "- `upcoming games`: Show next scheduled game\n"
+            "- `games today`: Show today's games\n"
             "- `help`: Show this help message"
         )
         update.message.reply_text(msg, parse_mode="Markdown")
-
     else:
-        update.message.reply_text(
-            "❓ Unknown command. Type `help` to see available commands.",
-            parse_mode="Markdown"
-        )
+        update.message.reply_text("❓ Unknown command. Type `help` to see available commands.", parse_mode="Markdown")
 
 
 # ---------- Alerts & Scheduler ----------
@@ -398,11 +380,8 @@ def schedule_one_hour_warnings(for_tomorrow=False):
 
     # Clear only old reminder jobs
     schedule.clear("reminders")
-
-    # Pick correct fetcher
     games = fetch_games_tomorrow() if for_tomorrow else fetch_games_today()
     now = datetime.now(EASTERN)
-
     for g in games:
         game_time = g["time"]
         # Debug log for what's being scheduled
@@ -448,15 +427,9 @@ def schedule_one_hour_warnings(for_tomorrow=False):
 def run_scheduler():
     # 23:59 cleanup: clear reminders (keeps the log) and re-add for late games
     schedule.every().day.at("23:59").do(refresh_reminders)
-
-    # Full reset at 00:01 for the new day
     schedule.every().day.at("00:01").do(lambda: schedule.clear("reminders"))
     schedule.every().day.at("00:01").do(schedule_one_hour_warnings)
-
-    # 10 AM → summary of today
     schedule.every().day.at("10:00").do(alert_games_today)
-
-    # 8 PM → summary of tomorrow
     schedule.every().day.at("20:00").do(alert_games_tomorrow)
 
     # 8:01 PM → tomorrow’s reminders (build reminders for tomorrow)
@@ -472,7 +445,7 @@ def run_scheduler():
 
 
 def refresh_reminders():
-    logger.info("23:59 cleanup: clearing reminders and re-adding for late games")
+    logger.info("23:59 cleanup: refreshing reminders...")
     schedule.clear("reminders")
     # Rebuild for any games still today
     schedule_one_hour_warnings()
@@ -483,11 +456,9 @@ def main():
     while True:
         try:
             logger.info("[INFO] Starting Telegram bot polling...")
-
             updater = Updater(token=TELEGRAM_BOT_TOKEN, use_context=True)
             dispatcher = updater.dispatcher
             dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command, handle_message))
-
             updater.start_polling(drop_pending_updates=True)
 
             # Start scheduler thread
@@ -496,12 +467,10 @@ def main():
 
             # Initial build of reminders for today
             schedule_one_hour_warnings()
-
             updater.idle()
         except Exception as e:
             logger.exception("[MAIN] Bot crashed: %s. Restarting in 10 seconds...", e)
             time.sleep(10)
-
 
 if __name__ == "__main__":
     main()
