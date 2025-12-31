@@ -1,8 +1,3 @@
-Got it ✅ — here’s the entire thing (everything from top to bottom) formatted as a single README.md file so you can copy and paste directly into your project without losing formatting.
-
-
----
-
 # 🏟️ Events Alert System (EAS)
 
 The **Events Alert System (EAS)** is a Python-based Telegram bot that automatically sends daily game alerts for your favorite teams.  
