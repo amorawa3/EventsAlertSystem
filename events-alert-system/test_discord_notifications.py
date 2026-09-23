@@ -6,6 +6,7 @@ import requests
 
 INTERVAL_SECONDS = 30
 DISCORD_API_URL = "https://discord.com/api/v10"
+DISCORD_USER_ID = "339982527840387074"
 
 
 def get_required_setting(name):
@@ -22,7 +23,7 @@ def send_test_message(token, channel_id):
             "Authorization": f"Bot {token}",
             "Content-Type": "application/json",
         },
-        json={"content": "hello"},
+        json={"content": f"<@{DISCORD_USER_ID}> hello"},
         timeout=10,
     )
     response.raise_for_status()
@@ -33,7 +34,7 @@ def main():
     token = get_required_setting("DISCORD_BOT_TOKEN")
     channel_id = get_required_setting("DISCORD_CHANNEL_ID")
 
-    print("Sending 'hello' every 30 seconds. Press Ctrl+C to stop.", flush=True)
+    print("Sending a mention with 'hello' every 30 seconds. Press Ctrl+C to stop.", flush=True)
     while True:
         try:
             send_test_message(token, channel_id)
