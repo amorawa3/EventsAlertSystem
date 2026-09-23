@@ -5,14 +5,14 @@ Got it ✅ — here’s the entire thing (everything from top to bottom) formatt
 
 # 🏟️ Events Alert System (EAS)
 
-The **Events Alert System (EAS)** is a Python-based Telegram bot that automatically sends daily game alerts for your favorite teams.  
+The **Events Alert System (EAS)** is a Python-based Discord bot that automatically sends daily game alerts for your favorite teams.
 It’s designed to run continuously on a Raspberry Pi and start automatically when the system boots.
 
 ---
 
 ## ⚽ Features
 
-- Sends **daily Telegram alerts** for your favorite teams (Braves, Falcons, Hawks, Atlanta United, USMNT, Costa Rica, etc.)
+- Sends **daily Discord alerts** for your favorite teams (Braves, Falcons, Hawks, Atlanta United, USMNT, Costa Rica, etc.)
 - Pulls real-time data from **TheSportsDB API**
 - Automatically sends:
   - **10 AM ET** → Today’s games  
@@ -29,7 +29,8 @@ It’s designed to run continuously on a Raspberry Pi and start automatically wh
 - Raspberry Pi running Raspberry Pi OS (or any Debian-based Linux)
 - Python **3.13+**
 - Internet connection
-- Telegram bot token (from [@BotFather](https://t.me/BotFather))
+- Discord application and bot token from the [Discord Developer Portal](https://discord.com/developers/applications)
+- Discord channel ID where alerts should be posted
 
 ---
 
@@ -101,8 +102,7 @@ deactivate
 This file defines all packages needed by the bot.
 It’s preconfigured for Python 3.13 compatibility.
 
-python-telegram-bot==13.15
-urllib3<2
+discord.py>=2.4,<3
 filetype
 schedule
 pytz
@@ -110,9 +110,7 @@ requests
 
 Why these versions?
 
-python-telegram-bot==13.15 → legacy API with Updater, Filters, etc.
-
-urllib3<2 → restores contrib.appengine removed in urllib3 v2+
+discord.py → Discord API client used for bot connectivity and messages.
 
 filetype → replacement for deprecated imghdr
 
@@ -122,24 +120,25 @@ schedule, pytz, requests → used for scheduling, time zones, and API calls
 
 ---
 
-💬 Telegram Configuration
+💬 Discord Configuration
 
-1. Open Telegram and search for @BotFather.
-
-
-2. Send /newbot and follow the instructions to create a new bot.
+1. Create a bot application in the [Discord Developer Portal](https://discord.com/developers/applications).
 
 
-3. Copy the API token you receive.
+2. Add a Bot user, copy its token, and keep it secret.
 
 
-4. Open your bot script (events_alert_system.py) and paste your token:
+3. Enable the **Message Content Intent** under the bot's privileged gateway intents.
 
 
+4. Set the required environment variables before starting the bot:
 
-BOT_TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"
+```bash
+export DISCORD_BOT_TOKEN="YOUR_DISCORD_BOT_TOKEN"
+export DISCORD_CHANNEL_ID="YOUR_DISCORD_CHANNEL_ID"
+```
 
-Save the file.
+Invite the bot to your server with the `bot` OAuth2 scope and permissions to view and send messages in the target channel. Enable Developer Mode in Discord to copy the channel ID.
 
 
 ---
@@ -249,8 +248,8 @@ sudo systemctl restart events-alert.service
 Problem	Cause	Fix
 
 No module named imghdr	Python 3.13 removed imghdr	Fixed via filetype dependency
-cannot import name 'Filters'	Using PTB v20+ with old code	Pin PTB to 13.15
-No module named urllib3.contrib.appengine	urllib3 v2+ removed that submodule	Downgrade with urllib3<2
+Discord bot does not connect	Invalid token or missing Message Content Intent	Check the Discord Developer Portal settings and environment variable
+Discord bot cannot send	Incorrect channel ID or missing permissions	Verify the channel ID and grant View Channel and Send Messages
 Service won’t start	Wrong path in systemd file	Double-check paths and username
 
 
@@ -270,7 +269,7 @@ Built around schedule and pytz for reliable timing.
 
 Game data is fetched from TheSportsDB.
 
-Telegram messages are sent via python-telegram-bot API calls.
+Discord messages are sent via discord.py API calls.
 
 
 

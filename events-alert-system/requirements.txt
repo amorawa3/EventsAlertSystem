@@ -1,5 +1,4 @@
-python-telegram-bot==13.15
-urllib3<2
+discord.py>=2.4,<3
 filetype
 schedule
 pytz

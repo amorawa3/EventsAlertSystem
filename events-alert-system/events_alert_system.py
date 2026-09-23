@@ -1,9 +1,10 @@
 import requests
 import schedule
 import time
+import asyncio
 from datetime import datetime, timedelta
-from telegram import Bot
-from telegram.ext import Updater, MessageHandler, Filters
+import discord
+from discord.ext import commands
 import pytz
 import threading
 import logging
@@ -53,22 +54,51 @@ TEAM_NAME_MAP = {
     "F1": "Formula 1"
 }
 
-TELEGRAM_BOT_TOKEN = "7776029372:AAF6p__5OrxhKCHl_VJKEJEYFX8ZO_JMkuk"
-TELEGRAM_CHAT_ID = "7635798789"
+DISCORD_BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN")
+DISCORD_CHANNEL_ID = os.getenv("DISCORD_CHANNEL_ID")
+if not DISCORD_BOT_TOKEN:
+    raise RuntimeError("DISCORD_BOT_TOKEN environment variable is required")
+if not DISCORD_CHANNEL_ID:
+    raise RuntimeError("DISCORD_CHANNEL_ID environment variable is required")
+try:
+    DISCORD_CHANNEL_ID = int(DISCORD_CHANNEL_ID)
+except ValueError as exc:
+    raise RuntimeError("DISCORD_CHANNEL_ID must be an integer") from exc
+
 EASTERN = pytz.timezone("US/Eastern")
-bot = Bot(token=TELEGRAM_BOT_TOKEN)
+intents = discord.Intents.default()
+intents.message_content = True
+bot = commands.Bot(command_prefix="!", intents=intents)
+discord_loop = None
 
 
 # ---------- Utilities ----------
-def send_alert(msg):
+async def send_alert(msg):
     """
-    Send a message to the configured Telegram chat and log it.
+    Send a message to the configured Discord channel and log it.
     """
-    logger.info("[TELEGRAM] %s", msg.replace("\n", " | "))
+    logger.info("[DISCORD] %s", msg.replace("\n", " | "))
     try:
-        bot.send_message(chat_id=TELEGRAM_CHAT_ID, text=msg, parse_mode="Markdown")
+        channel = bot.get_channel(DISCORD_CHANNEL_ID)
+        if channel is None:
+            channel = await bot.fetch_channel(DISCORD_CHANNEL_ID)
+        if not isinstance(channel, discord.abc.Messageable):
+            raise RuntimeError(f"Discord channel {DISCORD_CHANNEL_ID} cannot receive messages")
+        await channel.send(msg)
     except Exception as e:
-        logger.exception(f"[ERROR] Failed to send Telegram message: {e}")
+        logger.exception(f"[ERROR] Failed to send Discord message: {e}")
+
+
+def dispatch_alert(msg):
+    """Submit an alert from the scheduler thread to Discord's event loop."""
+    if discord_loop is None or not discord_loop.is_running():
+        logger.error("[ERROR] Cannot send Discord alert: event loop is not running")
+        return
+    future = asyncio.run_coroutine_threadsafe(send_alert(msg), discord_loop)
+    try:
+        future.result(timeout=30)
+    except Exception:
+        logger.exception("[ERROR] Discord alert failed")
 
 
 def safe_parse_datetime_from_thesportsdb(date_str, time_str):
@@ -333,16 +363,27 @@ def format_games(games, header):
     return header + "\n\n" + "\n\n".join(lines)
 
 
-def handle_message(update, context):
-    text = update.message.text.lower().strip()
+@bot.event
+async def on_ready():
+    global discord_loop
+    discord_loop = asyncio.get_running_loop()
+    logger.info("[INFO] Discord bot connected as %s", bot.user)
+
+
+@bot.event
+async def on_message(message):
+    if message.author.bot:
+        return
+
+    text = message.content.lower().strip()
     if text == "upcoming games":
         games = fetch_next_games()
         msg = format_games(games, "🔜 *Upcoming Games:*")
-        update.message.reply_text(msg, parse_mode="Markdown")
+        await message.channel.send(msg)
     elif text == "games today":
         games = fetch_games_today()
         msg = format_games(games, "📅 *Games Today:*")
-        update.message.reply_text(msg, parse_mode="Markdown")
+        await message.channel.send(msg)
     elif text == "help":
         msg = (
             "🤖 *Available Commands:*\n"
@@ -350,9 +391,11 @@ def handle_message(update, context):
             "- `games today`: Show today's games\n"
             "- `help`: Show this help message"
         )
-        update.message.reply_text(msg, parse_mode="Markdown")
+        await message.channel.send(msg)
     else:
-        update.message.reply_text("❓ Unknown command. Type `help` to see available commands.", parse_mode="Markdown")
+        await message.channel.send("❓ Unknown command. Type `help` to see available commands.")
+
+    await bot.process_commands(message)
 
 
 # ---------- Alerts & Scheduler ----------
@@ -360,14 +403,14 @@ def alert_games_today():
     games = fetch_games_today()
     msg = format_games(games, "📅 *Today's Games:*")
     logger.info("Sending today's game alert")
-    send_alert(msg)
+    dispatch_alert(msg)
 
 
 def alert_games_tomorrow():
     games = fetch_games_tomorrow()
     msg = format_games(games, "⏭ *Tomorrow's Games:*")
     logger.info("Sending tomorrow's game alert")
-    send_alert(msg)
+    dispatch_alert(msg)
 
 
 def schedule_one_hour_warnings(for_tomorrow=False):
@@ -410,7 +453,7 @@ def schedule_one_hour_warnings(for_tomorrow=False):
                 f"(in 1 hour)"
             )
             # schedule a job that will only run on the intended date
-            schedule_job_with_date_check(reminder_time, lambda m=reminder_msg: send_alert(m), tag="reminders")
+            schedule_job_with_date_check(reminder_time, lambda m=reminder_msg: dispatch_alert(m), tag="reminders")
             logger.info("[SCHED] Planned 1-hour reminder for %s at %s (ET)", g.get("team_key"), reminder_time.strftime("%Y-%m-%d %H:%M"))
 
         # Game start alert
@@ -420,7 +463,7 @@ def schedule_one_hour_warnings(for_tomorrow=False):
                 f"*{TEAM_NAME_MAP.get(g['team_key'], g['team_key'])}* vs *{g['opponent']}* is starting now at "
                 f"{game_time.strftime('%I:%M %p ET')}!"
             )
-            schedule_job_with_date_check(game_time, lambda m=start_msg: send_alert(m), tag="reminders")
+            schedule_job_with_date_check(game_time, lambda m=start_msg: dispatch_alert(m), tag="reminders")
             logger.info("[SCHED] Planned start alert for %s at %s (ET)", g.get("team_key"), game_time.strftime("%Y-%m-%d %H:%M"))
 
 
@@ -453,24 +496,11 @@ def refresh_reminders():
 
 # ---------- Main ----------
 def main():
-    while True:
-        try:
-            logger.info("[INFO] Starting Telegram bot polling...")
-            updater = Updater(token=TELEGRAM_BOT_TOKEN, use_context=True)
-            dispatcher = updater.dispatcher
-            dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command, handle_message))
-            updater.start_polling(drop_pending_updates=True)
-
-            # Start scheduler thread
-            t = threading.Thread(target=run_scheduler, daemon=True)
-            t.start()
-
-            # Initial build of reminders for today
-            schedule_one_hour_warnings()
-            updater.idle()
-        except Exception as e:
-            logger.exception("[MAIN] Bot crashed: %s. Restarting in 10 seconds...", e)
-            time.sleep(10)
+    scheduler_thread = threading.Thread(target=run_scheduler, daemon=True)
+    schedule_one_hour_warnings()
+    scheduler_thread.start()
+    logger.info("[INFO] Starting Discord bot...")
+    bot.run(DISCORD_BOT_TOKEN)
 
 if __name__ == "__main__":
     main()
