@@ -39,7 +39,9 @@ TEAM_IDS = {
     "ATL_MLB": "135268",
     "ATL_UTD": "135851",
     "GATECH_FOOTBALL": "136893",
-    "GATECH_BASKETBALL": "138614"
+    "GATECH_BASKETBALL": "138614",
+    "LIVERPOOL": "133602",
+    "MANCHESTER_CITY": "133613"
 }
 
 TEAM_NAME_MAP = {
@@ -51,6 +53,8 @@ TEAM_NAME_MAP = {
     "ATL_UTD": "Atlanta United",
     "GATECH_FOOTBALL": "Georgia Tech Football",
     "GATECH_BASKETBALL": "Georgia Tech Basketball",
+    "LIVERPOOL": "Liverpool",
+    "MANCHESTER_CITY": "Manchester City",
     "F1": "Formula 1"
 }
 
