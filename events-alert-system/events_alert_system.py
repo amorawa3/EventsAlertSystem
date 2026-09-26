@@ -180,7 +180,8 @@ def schedule_job_with_date_check(run_dt, func, tag="reminders"):
             logger.exception("[SCHED-ERR] Error running scheduled job at %s: %s", hhmm, e)
 
     # Register job daily at hh:mm; tag it so we can clear later
-    schedule.every().day.at(hhmm).do(job_wrapper).tag(tag)
+    date_tag = f"{tag}:{run_dt.date().isoformat()}"
+    schedule.every().day.at(hhmm).do(job_wrapper).tag(tag, date_tag)
     logger.info("[SCHED] Registered daily job at %s for date %s (tag=%s)", hhmm, run_dt.date(), tag)
 
 
@@ -425,10 +426,10 @@ def schedule_one_hour_warnings(for_tomorrow=False):
     day_label = "tomorrow" if for_tomorrow else "today"
     logger.info("Scheduling one-hour warnings and game start alerts for %s", day_label)
 
-    # Clear only old reminder jobs
-    schedule.clear("reminders")
-    games = fetch_games_tomorrow() if for_tomorrow else fetch_games_today()
     now = datetime.now(EASTERN)
+    target_date = now.date() + timedelta(days=1) if for_tomorrow else now.date()
+    schedule.clear(f"reminders:{target_date.isoformat()}")
+    games = fetch_games_tomorrow() if for_tomorrow else fetch_games_today()
     for g in games:
         game_time = g["time"]
         # Debug log for what's being scheduled
@@ -438,10 +439,6 @@ def schedule_one_hour_warnings(for_tomorrow=False):
         # Skip games not in the target date (extra safety)
         # This is a quick filter so we don't attempt to schedule obviously wrong times
         # but the real guard is the date-check inside scheduled job (Option 2).
-        if for_tomorrow:
-            target_date = (now.date() + timedelta(days=1))
-        else:
-            target_date = now.date()
         if game_time.date() != target_date:
             logger.info("[SCHED-SKIP] Not scheduling %s (%s) because event.date=%s != target=%s",
                         g.get("team_key"), g.get("opponent"), game_time.date(), target_date)
